@@ -45,6 +45,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
   
   # 環境変数を使用できる
   gem 'dotenv-rails'
+  
+  
+  # socialiizatioinを使用できる
+  gem 'socialization'
+  
+   # ページネーションを実装できる
+  gem 'kaminari'
+
+# それらしい値を自動生成できる
+   gem 'faker', '2.21.0  '
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
