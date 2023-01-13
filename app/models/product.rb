@@ -8,6 +8,7 @@ class Product < ApplicationRecord
     scope :display_list, -> (page) { page(page).per(PER) }
   scope :category_products, -> (category, page) { 
     where(category_id: category).page(page).per(PER)
+    
   }
   scope :sort_products, -> (sort_order, page) {
     where(category_id: sort_order[:sort_category]).order(sort_order[:sort]).

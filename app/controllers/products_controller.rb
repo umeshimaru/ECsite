@@ -9,9 +9,12 @@ class ProductsController < ApplicationController
       @products = Product.sort_products(sort_params, params[:page])
     elsif params[:category].present?
       @category = Category.request_category(params[:category])
+     
       @products = Product.category_products(@category, params[:page])
+      
     else
       @products = Product.display_list(params[:page])
+      pp @products
     end
      @categories = Category.all
       @major_category_names = Category.major_categories
